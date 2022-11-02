@@ -19,15 +19,35 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
     rel="stylesheet"
   />
-    <title>Weather Forecast</title>
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header class="jumbotron">
-        <h1 class="display-3">Weather Forecast</h1>
-        <p class="lead">7 Day Weather Forecast <i class='fas fa-cloud-sun-rain' style='font-size:24px'></i></p>
-      </header>
+    <header id="jumbotron" >
+        <h1 class="display-4">Weather Dashboard</h1>
+        <p class="h3">Search a City to See the 7 Day Weather Forecast <i class='fas fa-cloud-sun-rain' style='font-size:24px'></i></p>
+        <p id="currentDay" class="h4"></p>
+        <p id="currentTime" class="h5"></p>
 
+      </header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 bg-light">
+            <!-- creating the search bar to look up cities -->
+            <h4 id="searchBar">Search for a City</h4>
+            <!-- create the text box to capture the search city name -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="search-city" aira-label="City Search" aria-describedby="search-button">
+                <div class="input-group-append">
+                  <button class="btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+         <!-- section for seatch city history -->
+          <button class="btn btn-primary" type="button" id="clear-history">Clear History</button>
+          <ul class="list-group">
+
+          </ul>
+        </div>
 
 
 

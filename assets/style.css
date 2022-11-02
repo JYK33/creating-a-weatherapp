@@ -2,10 +2,16 @@
     font-family: monospace;
 }
 
-.jumbotron {
+#jumbotron {
     text-align: center;
     background: linear-gradient(180deg, lightblue, lightgrey );
     color:black;
     border-radius: 0;
     border-bottom: 0.5px solid black;
+    padding-top: 20px;
+    padding-bottom: 9px;
+}
+#searchBar {
+    padding-top: 8px;
+    font-weight: bold;
 }
