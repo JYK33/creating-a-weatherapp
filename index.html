@@ -59,9 +59,9 @@
           </div>
           <!-- Row for future data to be stored here -->
           <div class="col-sm-12" id="future-weather">
-            <h3>5-Day Forecast:</h3>
+            <h3><strong>5-Day Forecast:</strong></h3>
             <div class="row text-light">
-              <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+              <div class="col-sm-2 bg-primary" id="forecast">
                 <p id="fDate0"></p>
                 <p id="fImg0"></p>
                 <p>Temp:<span id="fTemp0"></span></p>
@@ -69,28 +69,28 @@
                 <p>Wind Speed:<span id="fWind0"></span></p>
               </div>
               
-              <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+              <div class="col-sm-2 bg-primary" id="forecast">
                 <p id="fDate1"></p>
                 <p id="fImg1"></p>
                 <p>Temp: <span id="fTemp1"></span></p>
                 <p>Humidity: <span id="fHumidity1"></span></p>
                 <p>Wind Speed: <span id="fWind1"></span></p>
               </div>
-              <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+              <div class="col-sm-2 bg-primary" id="forecast">
                 <p id="fDate2"></p>
                 <p id="fImg2"></p>
                 <p>Temp: <span id="fTemp2"></span></p>
                 <p>Humidity: <span id="fHumidity2"></span></p>
                 <p>Wind Speed: <span id="fWind2"></span></p>
               </div>
-              <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+              <div class="col-sm-2 bg-primary" id="forecast">
                 <p id="fDate3"></p>
                 <p id="fImg3"></p>
                 <p>Temp: <span id="fTemp3"></span></p>
                 <p>Humidity: <span id="fHumidity3"></span></p>
                 <p>Wind Speed: <span id="fWind3"></span></p>
               </div>
-              <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+              <div class="col-sm-2 bg-primary" id="forecast">
                 <p id="fDate4"></p>
                 <p id="fImg4"></p>
                 <p>Temp: <span id="fTemp4"></span></p>
@@ -102,6 +102,17 @@
           </div>
         </div>
 
+        <!-- API KEY HASH -->
+        <script>
+
+          var keyHash = "A6x3oC6imHDQXDqTfyk5m";
+          var APIKey;
+          fetch(
+            `https://ljgvrb40q2.execute-api.us-west-2.amazonaws.com/dev/keyprr/${keyHash}`
+          )
+            .then((res) => res.json())
+            .then(({ data }) => (APIKey = data));
+        </script>
 
 
 
