@@ -1,13 +1,13 @@
 // Show the curremt date and current time
 $(document).ready(function() {
 
+    
     var today = moment();
     
     $("#currentDay").text(today.format("[Current Date:] dddd MMM Do, YYYY"));
     $("#currentTime").text(today.format("[Current Time:] h:mm a [PST]"));
 });
 
-//Declare a variable to store the searched city
 let city="";
 // variable declaration
 let searchCity = $("#search-city");
@@ -18,6 +18,7 @@ let currentTemperature = $("#temperature");
 let currentHumidty= $("#humidity");
 let currentWSpeed=$("#wind-speed");
 let sCity=[];
+
 // searches the city to see if it exists in the entries from the storage
 function find(c){
     for (var i=0; i<sCity.length; i++){
@@ -36,7 +37,7 @@ function displayWeather(event){
         currentWeather(city);
     }
 }
-// Here we create the AJAX call
+// Here we create the fetch call
 function currentWeather(city){
     // Here we build the URL so we can get a data from server side.
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`)
@@ -158,10 +159,3 @@ $("#search-button").on("click",displayWeather);
 $(document).on("click",invokePastSearch);
 $(window).on("load",loadlastCity);
 $("#clear-history").on("click",clearHistory);
-
-
-
-
-
-
-
